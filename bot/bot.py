@@ -28,7 +28,7 @@ class CompetitiveBot(BotAI):
         Populate this function with whatever your bot should do!
         """
        #make Drone if we have minerals and supply is ok
-        if self.can_afford("Drone") and self.supply_left > 0 and self.larva > 0
+        if self.can_afford("Drone") and self.supply_left > 0 and self.larva > 0:
             my_larva = self.larva.random
             my_larva(AbilityID.Larvation_Drone)
         pass
