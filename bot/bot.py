@@ -1,11 +1,12 @@
 from sc2.bot_ai import BotAI, Race
 from sc2.data import Result
+from sc2.ids.ability_id import AbilityId
 
 class CompetitiveBot(BotAI):
-    NAME: str = "CompetitiveBot"
+    NAME: str = "ZanotyBot"
     """This bot's name"""
 
-    RACE: Race = Race.Terran
+    RACE: Race = Race.Zerg
     """This bot's Starcraft 2 race.
     Options are:
         Race.Terran
@@ -26,7 +27,10 @@ class CompetitiveBot(BotAI):
         This code runs continually throughout the game
         Populate this function with whatever your bot should do!
         """
-        
+       #make Drone if we have minerals and supply is ok
+        if self.can_afford("Drone") and self.supply_left > 0 and self.larva > 0
+            my_larva = self.larva.random
+            my_larva(AbilityID.Larvation_Drone)
         pass
 
     async def on_end(self, result: Result):
